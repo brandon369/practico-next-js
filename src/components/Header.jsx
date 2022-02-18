@@ -1,5 +1,7 @@
 import React, {useState, useContext} from 'react'
 // import '@styles/Header.module.scss'
+import Image from "next/image";
+import Link from "next/link";
 import Menu from "./Menu";
 import menu from "@icons/icon_menu.svg";
 import logo from "@logos/logo_yard_sale.svg";
@@ -28,10 +30,12 @@ const Header = () => {
   return (
     <>
       <nav className={styles.Nav}>
-        <img src={menu} alt="menu" className="menu"/>
+        <img src={menu.src} alt="menu" className={styles.menu}/>
 
         <div className={styles['navbar-left']}>
-          <img src={logo} alt="logo" className={styles['nav-logo']}/>
+          <Link href="/">
+            <Image src={logo} alt="logo" className={styles['nav-logo']}/>
+          </Link>
 
           <ul>
             <li>
@@ -59,7 +63,7 @@ const Header = () => {
           <ul>
             <li className={styles['navbar-email']} onClick={handleToggle}>platzi@example.com</li>
             <li className={styles['navbar-shopping-cart']} onClick={handleToggleOrders}>
-              <img src={shoppingCar} alt="shopping cart"/>
+              <Image src={shoppingCar} alt="shopping cart"/>
               {state.cart.length > 0 && (
 
                 <div>{state.cart.length}</div>

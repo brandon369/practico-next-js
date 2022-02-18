@@ -1,6 +1,7 @@
 @import 'vars';
 
 .Menu {
+	z-index: 1;
 	width: 100px;
 	height: auto;
 	border: 1px solid var(--very-light-pink);
@@ -9,6 +10,8 @@
 	position: absolute;
 	top: 60px;
 	right: 50px;
+	background-color: white;
+
 }
 .Menu ul {
 	list-style: none;
