@@ -1,7 +1,5 @@
 import { useContext } from 'react';
 import OrderItem from '../components/OrderItem';
-
-import Menu from '../components/Menu';
 import styles from '@styles/Checkout.module.scss';
 import AppContext from '../context/AppContext';
 import Head from 'next/head';

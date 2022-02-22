@@ -7,19 +7,22 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint:fix": "eslint src/ --fix"
+    "lint:fix": "eslint src/ --fix",
+    "export": "next build && next export"
   },
   "dependencies": {
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^4.0.0",
     "next": "12.0.10",
+    "next-pwa": "^5.4.4",
     "prettier": "^2.5.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "sass": "^1.49.8"
   },
   "devDependencies": {
+    "axios": "^0.26.0",
     "eslint": "8.9.0",
     "eslint-config-next": "^12.0.10"
   }

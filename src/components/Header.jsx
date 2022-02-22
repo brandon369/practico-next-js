@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react'
+import React, {useState, useContext} from 'react';
 // import '@styles/Header.module.scss'
 import Image from "next/image";
 import Link from "next/link";
@@ -9,22 +9,22 @@ import shoppingCar from "@icons/icon_shopping_cart.svg";
 import AppContext from "../context/AppContext";
 import MyOrder from "../containers/MyOrder";
 
-import styles from '../styles/Header.module.scss'
+import styles from '../styles/Header.module.scss';
 
 const Header = () => {
-  const {state} = useContext(AppContext)
+  const {state} = useContext(AppContext);
 
   const [toggle, setToggle] = useState(false);
   const [toggleOrders, setToggleOrders] = useState(false);
 
-  console.log(state)
+  console.log(state);
 
   const handleToggle = () => {
-    setToggle(!toggle)
-  }
+    setToggle(!toggle);
+  };
   const handleToggleOrders = () => {
-    setToggleOrders(!toggleOrders)
-  }
+    setToggleOrders(!toggleOrders);
+  };
 
 
   return (
@@ -39,30 +39,30 @@ const Header = () => {
 
           <ul>
             <li>
-              <a href="/">All</a>
+              <Link href="/">All</Link>
             </li>
             <li>
-              <a href="/">Clothes</a>
+              <Link href="/">Clothes</Link>
             </li>
             <li>
-              <a href="/">Electronics</a>
+              <Link href="/">Electronics</Link>
             </li>
             <li>
-              <a href="/">Furnitures</a>
+              <Link href="/">Furnitures</Link>
             </li>
             <li>
-              <a href="/">Toys</a>
+              <Link href="/">Toys</Link>
             </li>
             <li>
-              <a href="/">Others</a>
+              <Link href="/">Others</Link>
             </li>
           </ul>
         </div>
 
         <div className={styles['navbar-right']}>
           <ul>
-            <li className={styles['navbar-email']} onClick={handleToggle}>platzi@example.com</li>
-            <li className={styles['navbar-shopping-cart']} onClick={handleToggleOrders}>
+            <li aria-hidden="true" className={styles['navbar-email']} onClick={handleToggle}>platzi@example.com</li>
+            <li aria-hidden="true" className={styles['navbar-shopping-cart']} onClick={handleToggleOrders}>
               <Image src={shoppingCar} alt="shopping cart"/>
               {state.cart.length > 0 && (
 
@@ -78,7 +78,7 @@ const Header = () => {
     </>
 
 
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
